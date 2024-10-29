@@ -7,5 +7,7 @@
     <string name="card_starts_in_past">Race is live</string>
     <string name="card_start_time">Time: %1$s</string>
     <string name="card_start_venue">Venue: %1$s(%2$s)</string>
+    <string name="card_meeting_name">MeetingName: %1$s</string>
+    <string name="card_race_number">Race number: %1$s</string>
     <string name="error_screen_title">Something went wrong. Please try again</string>
 </resources>

@@ -20,7 +20,9 @@ internal class SummaryMapper @Inject constructor(
                 startDateTime = formatter.format(advertisedStart),
                 category = category,
                 timeToStartInSeconds = dateTimeHelper.timeDifferenceInSeconds(advertisedStart),
-                advertisedStart = advertisedStart
+                advertisedStart = advertisedStart,
+                meetingName = meetingName,
+                number = number
             )
         }
     }
