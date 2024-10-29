@@ -31,7 +31,7 @@ custom Entain theme.
 ## Navigation
 
 Navigation is done through compose-navigation library. Each `ui` module is supposed to provide their
-navGraph into a set through dagger. The set is then looped through an loaded in the `app` module.
+navGraph into a set through dagger. The set is then looped through and loaded in the `app` module.
 For an example, please see `RaceUiActivityModule`
 
 ## Code structure
@@ -59,7 +59,7 @@ For linting, spotless(ktlint) has been integrated with a few custom rules
 
 # Documentation
 
-Public classes and interfaces have documentation on how to use. The implementation classes for these
+Public classes and interfaces have documentation on how to use them. The implementation classes for these
 interfaces are internal.
 
 # Given more time, what could be done better

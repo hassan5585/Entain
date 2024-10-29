@@ -141,6 +141,14 @@ private fun RaceSummaryCell(summary: RaceUiSummary) {
                 text = stringResource(id = R.string.card_start_venue, summary.venueName, summary.venueState),
                 style = MaterialTheme.typography.bodyLarge
             )
+            Text(
+                text = stringResource(id = R.string.card_meeting_name, summary.meetingName),
+                style = MaterialTheme.typography.bodyLarge
+            )
+            Text(
+                text = stringResource(id = R.string.card_race_number, summary.number),
+                style = MaterialTheme.typography.bodyLarge
+            )
         }
     }
 }
@@ -176,7 +184,11 @@ private fun ErrorStatePreview() {
 private fun SuccessStatePreview() {
     EntainTheme {
         Surface {
-            val summary = RaceUiSummary("id", "RaceName", "MCG", "VIC", "Oct 29, 2024, 11:09:00 PM", RaceCategory.HORSE, 100L, LocalDateTime.now())
+            val summary = RaceUiSummary(
+                "id", "RaceName", 10, "MCG", "VIC",
+                "Oct 29, 2024, 11:09:00 PM", RaceCategory.HORSE, 100L, LocalDateTime.now(),
+                "Meeting Name"
+            )
             SuccessState(
                 state = RaceViewmodel.State.Success(
                     listOf(
