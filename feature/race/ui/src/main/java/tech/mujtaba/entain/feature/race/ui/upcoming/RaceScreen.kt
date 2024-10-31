@@ -1,6 +1,5 @@
 package tech.mujtaba.entain.feature.race.ui.upcoming
 
-import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -75,7 +74,6 @@ private fun RaceContent(state: RaceViewmodel.State, toggleCategory: (RaceCategor
 
 @Composable
 private fun SuccessState(state: RaceViewmodel.State.Success, toggleCategory: (RaceCategory) -> Unit) {
-    Log.d("RacesCode", "SuccessState = $state")
     Column(modifier = Modifier.fillMaxSize()) {
         Row {
             state.allCategories.forEach { toggleCategory ->
