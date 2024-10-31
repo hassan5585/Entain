@@ -32,7 +32,12 @@ internal class RaceViewmodel @Inject constructor(
     private val _state: MutableStateFlow<State> = MutableStateFlow(State.Error)
     val state = _state.asStateFlow()
 
+    private var hasTimerStartedAlready = false
+    private var isAlreadyFetchingResults = false
+
     fun startTimer() {
+        if (hasTimerStartedAlready) return
+        hasTimerStartedAlready = true
         viewModelScope.launch(computationDispatcher) {
             while (true) {
                 val currentState = state.value
@@ -55,6 +60,8 @@ internal class RaceViewmodel @Inject constructor(
     }
 
     fun startFetchingRaces() {
+        if (isAlreadyFetchingResults) return
+        isAlreadyFetchingResults = true
         viewModelScope.launch(computationDispatcher) {
             observeNextRacesUsecase().collectLatest { result ->
                 when {
